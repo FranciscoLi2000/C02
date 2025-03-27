@@ -1,4 +1,5 @@
-#include "exam_rank02.h"
+#include <unistd.h>
+#include <ctype.h>
 
 int ft_str_is_lowercase(char *str)
 {
@@ -9,7 +10,7 @@ int ft_str_is_lowercase(char *str)
         return (1);
     while (str[i] != '\0')
     {
-        if (!ft_islower(str[i]))
+        if (!islower(str[i]))
             return (0);
         i++;
     }

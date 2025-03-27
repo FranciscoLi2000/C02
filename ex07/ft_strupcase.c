@@ -1,16 +1,15 @@
-#include "exam_rank02.h"
+#include <unistd.h>
+#include <ctype.h>
 
 char *ft_strupcase(char *str)
 {
-    int i;
+    int i = 0;
 
-    i = 0;
     while (str[i] != '\0')
     {
-        if (ft_islower(str[i]))
-            ft_toupper(str[i]);
+        if (islower(str[i]))
+            str[i] = toupper(str[i]);
         i++;
     }
-    str[i] = '\0';
     return (str);
 }

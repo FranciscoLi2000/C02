@@ -1,4 +1,5 @@
-#include "exam_rank02.h"
+#include <unistd.h>
+#include <ctype.h>
 
 int ft_str_is_numeric(char *str)
 {
@@ -9,7 +10,7 @@ int ft_str_is_numeric(char *str)
         return (1);
     while (str[i] != '\0')
     {
-        if (!ft_isdigit(str[i]))
+        if (!isdigit(str[i]))
             return (0);
         i++;
     }

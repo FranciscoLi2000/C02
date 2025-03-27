@@ -1,20 +1,23 @@
-#include "exam_rank02.h"
+#include <unistd.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
-	unsigned int	src_len;
-	unsigned int	i;
-
+    unsigned int i;
+	unsigned int j;
+	
 	i = 0;
-	src_len = ft_strlen(src);
-	if (size > 0)
+	j = 0;
+    if (!src)
+        return (0);
+    while (src[i] !='\0')
+        i++;
+    if (size == 0)
+        return (i);
+    while (j < size - 1 && src[j] != '\0')
 	{
-		while (i < size - 1 && src[i] != '\0')
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dest[j] = src[j];
+		j++;
 	}
-	return (src_len);
+    dest[size - 1] = '\0';
+    return (i);
 }

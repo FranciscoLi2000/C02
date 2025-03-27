@@ -1,5 +1,5 @@
-#include "exam_rank02.h"
-
+#include <unistd.h>
+/*
 char *ft_strcpy(char *dest, char *src)
 {
     unsigned int  i;
@@ -11,5 +11,13 @@ char *ft_strcpy(char *dest, char *src)
         i++;
     }
     dest[i] = '\0';
+    return (dest);
+}*/
+char    *ft_strcpy(char *dest, char *src)
+{
+    char    *dst;
+
+    *dst = dest;
+    while ((*dst++ = *src++));
     return (dest);
 }

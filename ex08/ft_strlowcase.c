@@ -1,4 +1,5 @@
-#include "exam_rank02.h"
+#include <unistd.h>
+#include <ctype.h>
 
 char *ft_strlowcase(char *str)
 {
@@ -7,8 +8,8 @@ char *ft_strlowcase(char *str)
     i = 0;
     while (str[i] != '\0')
     {
-        if (ft_isupper(str[i]))
-            ft_tolower(str[i]);
+        if (isupper(str[i]))
+            tolower(str[i]);
         i++;
     }
     str[i] = '\0';
