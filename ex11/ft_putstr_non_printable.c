@@ -36,3 +36,15 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char	str[50];
+
+	printf("Enter a string: ");
+	scanf("%s", str);
+	ft_putstr_non_printable(str);
+	return (0);
+}

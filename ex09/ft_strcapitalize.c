@@ -1,28 +1,29 @@
 #include <unistd.h>
 
-char *ft_strcapitalize(char *str)
+char	*ft_strcapitalize(char *str)
 {
-    int i = 0;
-    int in_word = 0;
+	int	i;
+	int	in_word;
 
-    while (str[i] != '\0')
-    {
-        // 如果是字母或数字
-        if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= '0' && str[i] <= '9'))
-        {
-            if (!in_word) 
-                str[i] &= ~32;  // 小写变大写 (清除第5位)
-            else 
-                str[i] |= 32;   // 大写变小写 (设置第5位)
-            in_word = 1;
-        }
-        else 
-        {
-            in_word = 0;
-        }
-        i++;
-    }
-    return str;
+	i = 0;
+	in_word = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z')
+			|| (str[i] >= 'A' && str[i] <= 'Z')
+			|| (str[i] >= '0' && str[i] <= '9'))
+		{
+			if (!in_word)
+				str[i] &= ~32;
+			else
+				str[i] |= 32;
+			in_word = 1;
+		}
+		else
+			in_word = 0;
+		i++;
+	}
+	return (str);
 }
 
 /* 位运算基础
@@ -39,3 +40,14 @@ C 语言的位运算是直接对整数的二进制位进行操作，主要有以
 左移 << 和 右移 >>：用于位移运算，类似乘法或除法。
 
 */
+#include <stdio.h>
+
+int	main(void)
+{
+	char	str[50];
+
+	printf("Enter a string: ");
+	scanf("%s", str);
+	printf("%s\n", ft_strcapitalize(str));
+	return (0);
+}
