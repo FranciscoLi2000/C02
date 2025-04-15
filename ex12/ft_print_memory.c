@@ -76,7 +76,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 int	main(void)
 {
 	unsigned int	size;
-	unsigned char	*str;
+	unsigned char	str[100];
 
 	size = 100;
 	printf("Enter a string: ");

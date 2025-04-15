@@ -9,7 +9,7 @@ char	*ft_strlowcase(char *str)
 	while (str[i] != '\0')
 	{
 		if (isupper(str[i]))
-			tolower(str[i]);
+			str[i] = tolower(str[i]);
 		i++;
 	}
 	str[i] = '\0';

@@ -27,8 +27,8 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 int	main(void)
 {
 	unsigned int	size;
-	const char	*src;
-	char	*dst;
+	const char	src[50];
+	char	dst[50];
 
 	size = 50;
 	printf("Enter the source string: ");
